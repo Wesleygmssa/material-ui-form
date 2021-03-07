@@ -6,7 +6,7 @@ export const Conatiner = styled.div`
 
 export const ContainerInt = styled.div`
      height: 100%;
-     background-color: #ddd;
+     /* background-color: #ddd; */
 `;
 
 export const BoxForm = styled.div`

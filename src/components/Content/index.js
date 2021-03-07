@@ -6,7 +6,7 @@ import
     ContainerInt,
     BoxTitle,
     BoxForm
-} from '../../styles';
+} from './styles';
 
 const Content = () =>{
     return(

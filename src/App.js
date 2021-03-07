@@ -11,6 +11,7 @@ import {
 } from './styles';
 import {FaCaretUp, FaCaretDown} from 'react-icons/fa';
 import { keyframes } from 'styled-components';
+import Content from './components/Content'
 
 
 //animação
@@ -31,9 +32,6 @@ export const AnimationContainer = styled.div`
   flex-direction: column;
   padding: 10px 20px;
   animation: ${apperFromCenter} 1s; //executando animação
-
- 
-
 ;
 `;
 
@@ -47,103 +45,6 @@ function App() {
       setTogleConteudos(!togleConteudos);
   }
 
-  
-
-  const ConteudoUm = () => {
-    return <div></div>
-  }
-  const ConteudoDois = () => {
-    return (
-      <AnimationContainer>
-             <ContainerInt>
-  
-  <BoxTitle>
-      <Title>Registro</Title>
-        <div className="TitleLine"></div>  
-  </BoxTitle>
-
-  <BoxForm>
-
-      <Grid container>
-        <Grid item lg={3} xs={12}>
-            <label>Status</label>
-             <TextField
-               id="outlined-helperText"
-               variant="outlined"
-           />
-        </Grid>
-       </Grid>
-
-       <Grid container>
-        <Grid item lg={3} xs={12}>
-            <label>Eixo temático</label>
-             <TextField
-               id="outlined-helperText"
-               variant="outlined"
-           />
-        </Grid>
-        <Grid item lg={3} xs={12}>
-            <label>Início período da ocorrência</label>
-             <TextField
-                type="date"
-               id="outlined-helperText"
-               variant="outlined"
-           />
-        </Grid>
-        <Grid item lg={3} xs={12}>
-            <label>Fim período da ocorrência </label>
-             <TextField
-             type="date"
-               id="outlined-helperText"
-               variant="outlined"
-           />
-        </Grid>
-       </Grid>
-
-        <Grid container>
-            <Grid item lg={3} xs={12}>
-            <label>Denunciante</label>
-             <TextField
-               id="outlined-helperText"
-               variant="outlined"
-           />
-        </Grid>
-
-        <Grid item lg={3} xs={12}>
-            <label>CPF/CNPJ do denunciante</label>
-             <TextField
-               id="outlined-helperText"
-               variant="outlined"
-           />
-        </Grid>
-       </Grid>
-
-       <Grid container>
-            <Grid item lg={3} xs={12}>
-            <label>Comunicante</label>
-             <TextField
-               id="outlined-helperText"
-               variant="outlined"
-           />
-        </Grid>
-
-        <Grid item lg={3} xs={12}>
-            <label>CPF/CNPJ do comunicante</label>
-             <TextField
-               id="outlined-helperText"
-               variant="outlined"
-           />
-        </Grid>
-       </Grid>
-  </BoxForm>
-
-</ContainerInt>  
-        
-      </AnimationContainer>
- 
-    )
-  }
-  
   return (
     <Conatiner>
 
@@ -151,7 +52,7 @@ function App() {
               Busca Avançada
               {togleConteudos ? <FaCaretUp size={20}/> : <FaCaretDown size={20}/>}
           </Button>
-          {togleConteudos ? <ConteudoDois /> : <ConteudoUm />}
+               {togleConteudos ? <Content /> : ''}
     </Conatiner>
   );
 }
